@@ -21,6 +21,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.use(express.static('public'));
 
 
 // Routes and Controllers
