@@ -13,11 +13,24 @@
             <li>
                 <a href="/">Home</a>
             </li>
-            <li>
-                <a href="/new">Create a new hike</a>
-            </li>
-
     </header>
-    
+    <main>
+        <section>
+            <ul>
+                <li> <%= hike.name %> </li>
+                <li> <%= hike.distance %> </li>
+                <li> <%= hike.difficulty %> </li>
+                <li> <%= hike.imageURL %> </li>
+            </ul>
+		</section>
+        <section>
+            <form action="/<%=hike._id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Hike" />
+            </form>
+        </section>
+		<section>
+	        <a href="/<%=hike._id%>/edit">Edit</a>
+        </section>
+	</main>
 </body>
 </html>
