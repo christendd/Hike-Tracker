@@ -20,8 +20,10 @@
                 <li> <%= hike.name %> </li>
                 <li> <%= hike.distance %> </li>
                 <li> <%= hike.difficulty %> </li>
-                <li> <%= hike.imageURL %> </li>
             </ul>
+            <div>
+                <img src="<%=hike.img %>">
+            </div>
 		</section>
         <section>
             <form action="/<%=hike._id%>?_method=DELETE" method="POST">
