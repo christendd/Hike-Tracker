@@ -17,6 +17,7 @@ A hiking tracker that lets you track your completed hikes with the information y
 
 
 ## Screenshots
+![screenshot 1](https://imgur.com/a/DeWbq6V.jpg)
 
 ## Getting Started
 [Click here](https://hike-tracker.herokuapp.com/) to see the deployed app.
