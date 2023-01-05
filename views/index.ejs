@@ -18,14 +18,17 @@
     <header>
       <h1> Ramble</h1>
     </header>
-    
     <main>
-      <% for(let i = 0; i < hikes.length; i++){ %>
-        <img src="<%= hikes[i].img%>" alt="" class="mainimg">
-        <br />
-        <a href="/<%=hikes[i]._id%>"><%= hikes[i].name %></a>
-      <% } %>
-    </main>
- 
+      <ul class="mainpage">
+        <% for(let i = 0; i < hikes.length; i++){ %>
+          <li class="mainli">
+           <img src="<%= hikes[i].img%>" alt="" class="mainimg">
+           <a href="/<%=hikes[i]._id%>"><%= hikes[i].name %></a>
+        </li>
+          <% } %>
+      </ul>
+      </main>
+      
+
 </body>
 </html>

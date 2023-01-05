@@ -9,31 +9,35 @@
     <title>Hike Tracker</title>
 </head>
 <body>
+    <header>
     <nav>
     
             <a href="/">Home</a>
+            <br>
+            <a href="/<%=hike._id%>/edit">Edit</a>
     </nav>
-
-    <header>
         <h1>Hike Info</h1>
         
     </header>
     <main>
+        <div class="showimg">
+            <img src="<%=hike.img %>">
+        </div>
+
         <section>
-            <ul>
+            
+            <ul class="showinfo">
                 <li> <%= hike.name %> </li>
                 <li> <%= hike.distance %> </li>
                 <li> <%= hike.difficulty %> </li>
             </ul>
-            <div>
-                <img src="<%=hike.img %>">
-            </div>
+            
 		</section>
-        <section>
-            <form action="/<%=hike._id%>?_method=DELETE" method="POST">
+        <section class="delete">
+            <form action="/<%=hike._id%>?_method=DELETE" method="POST" class="showdel" >
                 <input type="submit" value="Delete Hike" />
             </form>
-            <a href="/<%=hike._id%>/edit">Edit</a>
+    
         </section>
 		
 	</main>
