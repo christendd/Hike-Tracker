@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Barlow:600|Rasa:300,500" rel="stylesheet">
     <title>Hike Tracker</title>
 </head>
 <body>
+    <nav class="mainnav">
+            <ul>
+                <li><a href="/new">New Hike</a></li>
+                <!-- <li><a href="https://www.alltrails.com/">AllTrails</a></li> -->
+            </ul>
+    </nav>
     <header>
-        <h1> Ramble</h1>
-        <ul>
-            <li>
-                <a href="/new">New Hike</a>
-            </li>
-        </ul>
+      <h1> Ramble</h1>
     </header>
-    <main>
-        <ul>
-            <% for(let i = 0; i < hikes.length; i++){ %>
-            <li>
-                <a href="/<%=hikes[i]._id%>"><%= hikes[i].name %></a>
-            </li>
-            <% } %>
-        </ul>
-    </main>
     
+    <main>
+      <% for(let i = 0; i < hikes.length; i++){ %>
+        <img src="<%= hikes[i].img%>" alt="" class="mainimg">
+        <br />
+        <a href="/<%=hikes[i]._id%>"><%= hikes[i].name %></a>
+      <% } %>
+    </main>
+ 
 </body>
 </html>
